@@ -1,0 +1,223 @@
+/* Modern Certification Section */
+.qizuna-certification-modern {
+  background: linear-gradient(135deg, 
+    rgba(37, 189, 173, 0.05) 0%, 
+    rgba(240, 78, 35, 0.08) 50%, 
+    rgba(37, 189, 173, 0.03) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+}
+
+.qizuna-certification-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(37, 189, 173, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(240, 78, 35, 0.08) 0%, transparent 50%);
+  opacity: 0.6;
+}
+
+/* Certification Hero */
+.qizuna-cert-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.qizuna-cert-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.qizuna-cert-icon-modern {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.qizuna-cert-icon-modern .qizuna-cert-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.qizuna-cert-verified {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  background: #25BDAD;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 189, 173, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.qizuna-cert-content {
+  text-align: left;
+  flex: 1;
+}
+
+.qizuna-cert-label {
+  display: inline-block;
+  background: linear-gradient(135deg, #25BDAD, #F04E23);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(37, 189, 173, 0.3);
+}
+
+.qizuna-cert-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #25BDAD, #F04E23);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.qizuna-cert-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* Benefits Grid */
+.qizuna-cert-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.qizuna-cert-benefit-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.qizuna-cert-benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #25BDAD, #F04E23, #25BDAD);
+  border-radius: 20px 20px 0 0;
+}
+
+.qizuna-cert-benefit-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(37, 189, 173, 0.2);
+  border-color: rgba(37, 189, 173, 0.3);
+}
+
+.qizuna-benefit-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #25BDAD, #F04E23);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  box-shadow: 0 10px 30px rgba(37, 189, 173, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.qizuna-cert-benefit-card:hover .qizuna-benefit-icon {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.qizuna-cert-benefit-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.qizuna-cert-benefit-card p {
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.qizuna-benefit-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(37, 189, 173, 0.1);
+  color: #25BDAD;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(37, 189, 173, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .qizuna-cert-badge {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .qizuna-cert-content {
+    text-align: center;
+  }
+  
+  .qizuna-cert-title {
+    font-size: 2rem;
+  }
+  
+  .qizuna-cert-benefits {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .qizuna-cert-benefit-card {
+    padding: 2rem;
+  }
+}

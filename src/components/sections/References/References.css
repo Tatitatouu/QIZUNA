@@ -1,0 +1,233 @@
+/* Section Références - Clients et Partenaires */
+.qizuna-references {
+  background: var(--background-light);
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.qizuna-references::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(37, 189, 173, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(240, 78, 35, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* En-tête de section */
+.qizuna-references-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.qizuna-references-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.qizuna-gradient-text {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Grille des références */
+.qizuna-references-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cartes de référence */
+.qizuna-reference-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--border-light);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.qizuna-reference-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(37, 189, 173, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.qizuna-reference-card:hover::before {
+  left: 100%;
+}
+
+.qizuna-reference-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--primary-color);
+  box-shadow: 0 20px 40px rgba(37, 189, 173, 0.15);
+}
+
+/* Logo container */
+.qizuna-reference-logo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.qizuna-reference-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: all 0.3s ease;
+}
+
+.qizuna-reference-card:hover .qizuna-reference-logo img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+/* Placeholder pour logos manquants */
+.qizuna-logo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* Animations d'entrée échelonnées */
+.qizuna-ref-1 { animation: slideInUp 0.6s ease-out 0.1s both; }
+.qizuna-ref-2 { animation: slideInUp 0.6s ease-out 0.2s both; }
+.qizuna-ref-3 { animation: slideInUp 0.6s ease-out 0.3s both; }
+.qizuna-ref-4 { animation: slideInUp 0.6s ease-out 0.4s both; }
+.qizuna-ref-5 { animation: slideInUp 0.6s ease-out 0.5s both; }
+.qizuna-ref-6 { animation: slideInUp 0.6s ease-out 0.6s both; }
+.qizuna-ref-7 { animation: slideInUp 0.6s ease-out 0.7s both; }
+.qizuna-ref-8 { animation: slideInUp 0.6s ease-out 0.8s both; }
+.qizuna-ref-9 { animation: slideInUp 0.6s ease-out 0.9s both; }
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+
+/* Tablettes */
+@media (max-width: 968px) {
+  .qizuna-references {
+    padding: 4rem 0;
+  }
+  
+  .qizuna-references-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 600px;
+  }
+  
+  .qizuna-reference-card {
+    padding: 2rem 1.5rem;
+    min-height: 120px;
+  }
+  
+  .qizuna-reference-logo {
+    height: 50px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 640px) {
+  .qizuna-references {
+    padding: 3rem 0;
+  }
+  
+  .qizuna-references-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 400px;
+    padding: 0 1rem;
+  }
+  
+  .qizuna-reference-card {
+    padding: 1.5rem;
+    min-height: 100px;
+    border-radius: 16px;
+  }
+  
+  .qizuna-reference-logo {
+    height: 45px;
+  }
+  
+  .qizuna-references-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+  .qizuna-references-header {
+    margin-bottom: 3rem;
+  }
+  
+  .qizuna-references-grid {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .qizuna-reference-card {
+    padding: 1.2rem;
+    min-height: 90px;
+  }
+  
+  .qizuna-reference-logo {
+    height: 40px;
+  }
+  
+  .qizuna-logo-placeholder {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+  }
+}

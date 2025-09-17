@@ -1,3 +1,21 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Interdire l'accès aux fichiers de développement
+Disallow: /static/
+Disallow: /*.json$
+Disallow: /*.map$
+
+# Sitemap
+Sitemap: https://qizuna.fr/sitemap.xml
+
+# Optimisation pour les principaux moteurs de recherche
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Politesse - Délai entre les requêtes
+Crawl-delay: 1
