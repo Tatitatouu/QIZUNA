@@ -1,6 +1,8 @@
 /* Contact Section */
 .qizuna-contact {
-  background: #1f2937;
+  background: radial-gradient(circle at 15% 15%, rgba(240, 78, 35, 0.4) 0%, transparent 40%),    
+              radial-gradient(circle at 80% 70%, rgba(37, 189, 173, 0.4) 0%, transparent 40%),                    
+            rgb(3,45,69);
   color: white;
   position: relative;
 }
@@ -82,7 +84,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
   color: white;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 .qizuna-form-group input::placeholder,

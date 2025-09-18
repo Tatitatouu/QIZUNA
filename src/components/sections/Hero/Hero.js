@@ -49,7 +49,7 @@ const Hero = () => {
           Bâtissons ensemble votre <span className="qizuna-gradient-text">avenir numérique</span>
         </h1>
         <p className="qizuna-hero-subtitle">
-          Solutions sur-mesure · Expertise technique · Accompagnement personnalisé
+          Applications & Logiciels sur-mesure · Expertise technique · Accompagnement personnalisé
         </p>
         <div className="qizuna-hero-buttons">
           <a href="#services" className="qizuna-btn-primary">

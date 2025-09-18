@@ -109,7 +109,7 @@
   height: 40px;
   border: none;
   background: rgba(59, 130, 246, 0.1);
-  color: #3b82f6;
+  color: var(--secondary-color);
   border-radius: 50%;
   font-size: 1.5rem;
   font-weight: 300;
@@ -121,7 +121,7 @@
 }
 
 .qizuna-modal-close:hover {
-  background: #3b82f6;
+  background: var(--secondary-color);
   color: white;
   transform: scale(1.1);
 }
@@ -140,7 +140,7 @@
 .qizuna-legal-section h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: var(--secondary-color);
   margin-bottom: 1rem;
 }
 

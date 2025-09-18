@@ -233,19 +233,64 @@
 .qizuna-icon-wrapper {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #25BDAD, #F04E23);
-  border-radius: 25px;
+  /* Discreet glass background with faint brand tint */
+  background: radial-gradient(circle at 20% 30%, rgba(240, 78, 35, 0.3) 0%, transparent 40%),    
+              radial-gradient(circle at 80% 70%, rgba(37, 189, 173, 0.4) 0%, transparent 40%),    
+              radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ffffff;
   font-size: 2.5rem;
-  box-shadow: 
-    0 10px 30px rgba(37, 189, 173, 0.4),
-    inset 0 -3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
   animation: iconFloat 4s ease-in-out infinite;
   position: relative;
   z-index: 2;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.qizuna-icon-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  /* Very soft brand-tinted sheen */
+  background:
+    radial-gradient(100px 60px at 18% 14%, rgba(255, 255, 255, 0.22), transparent 60%),
+    radial-gradient(120px 80px at 75% 85%, rgba(37, 189, 173, 0.12), transparent 60%),
+    radial-gradient(120px 80px at 85% 95%, rgba(255, 107, 71, 0.10), transparent 60%);
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+.qizuna-icon-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(37, 189, 173, 0.35), rgba(255, 107, 71, 0.28));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.qizuna-card-inner-dynamic:hover .qizuna-icon-wrapper {
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.28),
+    inset 0 -4px 10px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  filter: saturate(1.02) contrast(1.01);
 }
 
 @keyframes iconFloat {
