@@ -127,11 +127,11 @@
   border: none;
   border-radius: 12px;
   font-weight: 600;
-  font-family: 'Rubik', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
   box-shadow: 0 4px 20px rgba(37, 189, 173, 0.3);
+  font-family: 'Manrope', sans-serif;
 }
 
 .qizuna-btn-primary:hover {
