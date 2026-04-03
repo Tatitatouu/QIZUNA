@@ -1,0 +1,189 @@
+/* Testimonials Section */
+.qizuna-testimonials {
+  background: linear-gradient(135deg, rgb(3, 45, 69) 0%, rgb(5, 60, 90) 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.qizuna-testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(37, 189, 173, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.qizuna-testimonials::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(240, 78, 35, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.qizuna-testimonials .qizuna-section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.qizuna-testimonials .qizuna-section-title {
+  color: white;
+}
+
+.qizuna-testimonials .qizuna-section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.qizuna-testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.qizuna-testimonials-header .qizuna-section-title {
+  margin-bottom: 0;
+}
+
+.qizuna-testimonials-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.qizuna-testimonials-nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.qizuna-testimonials-nav button:hover {
+  border-color: #25BDAD;
+  color: #25BDAD;
+  background: rgba(37, 189, 173, 0.15);
+}
+
+/* Slider */
+.qizuna-testimonials-slider {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.5rem 0;
+  margin: 0 -1rem;
+  padding: 0.5rem 1rem;
+}
+
+.qizuna-testimonials-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.qizuna-testimonial-card {
+  flex: 0 0 300px;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: none;
+  scroll-snap-align: start;
+  transition: all 0.3s ease;
+}
+
+.qizuna-testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(37, 189, 173, 0.25);
+}
+
+.qizuna-testimonial-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.qizuna-testimonial-top > svg {
+  color: #25BDAD;
+  opacity: 0.6;
+}
+
+.qizuna-testimonial-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.qizuna-testimonial-content {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.qizuna-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.qizuna-testimonial-avatar {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #25BDAD, #1e9b8c);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.qizuna-testimonial-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.qizuna-testimonial-info strong {
+  color: rgb(3, 45, 69);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.qizuna-testimonial-info span {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .qizuna-testimonials-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .qizuna-testimonial-card {
+    flex: 0 0 280px;
+  }
+}

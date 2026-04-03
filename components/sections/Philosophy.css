@@ -1,0 +1,211 @@
+/* Philosophy Section */
+.qizuna-philosophy {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.qizuna-philosophy::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(37, 189, 173, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.qizuna-philosophy-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.qizuna-philosophy-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(37, 189, 173, 0.15), rgba(37, 189, 173, 0.05));
+  color: #25BDAD;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(37, 189, 173, 0.2);
+}
+
+.qizuna-philosophy-header h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: rgb(3, 45, 69);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.qizuna-philosophy-header h2 .highlight {
+  color: #25BDAD;
+}
+
+.qizuna-philosophy-intro {
+  font-size: 1.25rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Pillars Grid */
+.qizuna-philosophy-pillars {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 640px) {
+  .qizuna-philosophy-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .qizuna-philosophy-pillars {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.qizuna-pillar-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(37, 189, 173, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.qizuna-pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #25BDAD, #F04E23);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.qizuna-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(37, 189, 173, 0.15);
+}
+
+.qizuna-pillar-card:hover::before {
+  opacity: 1;
+}
+
+.qizuna-pillar-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(37, 189, 173, 0.15), rgba(37, 189, 173, 0.05));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #25BDAD;
+  margin-bottom: 1.25rem;
+}
+
+.qizuna-pillar-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: rgb(3, 45, 69);
+  margin-bottom: 0.75rem;
+}
+
+.qizuna-pillar-card p {
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Promise Block */
+.qizuna-philosophy-promise {
+  background: linear-gradient(135deg, rgb(3, 45, 69) 0%, rgb(5, 60, 90) 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.qizuna-philosophy-promise::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(37, 189, 173, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.qizuna-philosophy-promise::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(240, 78, 35, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.qizuna-promise-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.qizuna-promise-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #25BDAD;
+  margin-bottom: 1rem;
+}
+
+.qizuna-promise-content p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+}
+
+.qizuna-promise-content strong {
+  color: #25BDAD;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .qizuna-philosophy-header h2 {
+    font-size: 2rem;
+  }
+
+  .qizuna-philosophy-intro {
+    font-size: 1.0625rem;
+  }
+
+  .qizuna-philosophy-promise {
+    padding: 2rem;
+  }
+
+  .qizuna-promise-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .qizuna-promise-content p {
+    font-size: 1rem;
+  }
+}
