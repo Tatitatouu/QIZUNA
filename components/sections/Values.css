@@ -136,16 +136,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: textGlow 3s ease-in-out infinite;
-}
 
-@keyframes textGlow {
-  0%, 100% {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  }
-  50% {
-    text-shadow: 0 0 30px rgba(37, 189, 173, 0.8);
-  }
 }
 
 /* Grid Ultra-Dynamique - 3 Cartes */
@@ -397,11 +388,12 @@
 
 .qizuna-ripple {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 2px solid rgba(37, 189, 173, 0.5);
   border-radius: 50%;
   animation: rippleExpand 2s ease-out infinite;
+  will-change: transform, opacity;
 }
 
 .qizuna-ripple-2 {
@@ -411,13 +403,11 @@
 
 @keyframes rippleExpand {
   0% {
-    width: 0;
-    height: 0;
+    transform: scale(0);
     opacity: 1;
   }
   100% {
-    width: 300px;
-    height: 300px;
+    transform: scale(1);
     opacity: 0;
   }
 }

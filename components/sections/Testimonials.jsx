@@ -20,7 +20,7 @@ const Testimonials = ({ testimonials = [] }) => {
   return (
     <section className="qizuna-section qizuna-testimonials">
       <div className="qizuna-section-content">
-        <div className="qizuna-section-header qizuna-testimonials-header">
+        <div className="qizuna-section-header qizuna-testimonials-header qizuna-animate">
           <div>
             <h2 className="qizuna-section-title">Ils nous font confiance</h2>
             <p className="qizuna-section-subtitle">La satisfaction de nos clients est notre meilleure récompense</p>

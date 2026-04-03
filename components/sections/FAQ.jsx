@@ -55,14 +55,14 @@ const FAQ = () => {
   return (
     <section id="faq" className="qizuna-section qizuna-faq">
       <div className="qizuna-section-content">
-        <div className="qizuna-section-header">
+        <div className="qizuna-section-header qizuna-animate">
           <h2 className="qizuna-section-title">Questions fréquentes</h2>
           <p className="qizuna-section-subtitle">
             Tout ce que vous voulez savoir avant de nous contacter
           </p>
         </div>
 
-        <div className="qizuna-faq-list">
+        <div className="qizuna-faq-list qizuna-animate qizuna-animate-delay-2">
           {faqItems.map((item, index) => (
             <FAQItem
               key={index}

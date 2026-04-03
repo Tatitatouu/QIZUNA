@@ -15,7 +15,7 @@ const Certification = ({ data }) => {
     <section id="certification" className="qizuna-section qizuna-certification-modern">
       <div className="qizuna-section-content">
         {/* Hero Certification */}
-        <div className="qizuna-cert-hero">
+        <div className="qizuna-cert-hero qizuna-animate">
           <div className="qizuna-cert-badge">
             <div className="qizuna-cert-icon-modern">
               <img src="/logo-france-num.webp" alt="Certification France Num - Activateur numérique" className="qizuna-cert-logo" />
@@ -38,7 +38,7 @@ const Certification = ({ data }) => {
           {benefits.map((benefit, index) => {
             const HighlightIcon = highlightIcons[benefit.icon] || Sparkles
             return (
-              <div key={index} className="qizuna-cert-benefit-card">
+              <div key={index} className={`qizuna-cert-benefit-card qizuna-animate qizuna-animate-delay-${index + 1}`}>
                 <div className="qizuna-benefit-icon">
                   {getIcon(benefit.icon)}
                 </div>

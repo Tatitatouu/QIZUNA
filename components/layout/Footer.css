@@ -1,7 +1,7 @@
 /* Footer Simple */
 .qizuna-footer-simple {
   background: #1f2937;
-  color: #9ca3af;
+  color: #d1d5db;
   padding: 2rem 0;
   border-top: 1px solid #25BDAD;
 }
@@ -41,7 +41,7 @@
 .qizuna-footer-link {
   background: none;
   border: none;
-  color: #9ca3af;
+  color: #d1d5db;
   text-decoration: none;
   font-size: 0.875rem;
   cursor: pointer;
@@ -55,7 +55,7 @@
 }
 
 .qizuna-footer-copyright {
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 0.875rem;
 }
 
@@ -88,7 +88,7 @@
   background: rgba(37, 189, 173, 0.08);
   border: 1px solid rgba(37, 189, 173, 0.2);
   border-radius: 20px;
-  color: #9ca3af;
+  color: #d1d5db;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;

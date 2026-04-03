@@ -247,10 +247,10 @@
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 4px 20px rgba(37, 189, 173, 0.4);
+    opacity: 0.85;
   }
   50% {
-    box-shadow: 0 4px 25px rgba(37, 189, 173, 0.6);
+    opacity: 1;
   }
 }
 

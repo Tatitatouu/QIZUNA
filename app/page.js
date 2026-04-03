@@ -15,6 +15,7 @@ import {
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import ScrollButton from '@/components/layout/ScrollButton'
+import ScrollAnimations from '@/components/layout/ScrollAnimations'
 import Hero from '@/components/sections/Hero'
 import Services from '@/components/sections/Services'
 import Philosophy from '@/components/sections/Philosophy'
@@ -42,6 +43,7 @@ export default function Home() {
       </main>
       <Footer data={footerData} />
       <ScrollButton />
+      <ScrollAnimations />
     </div>
   )
 }

@@ -6,14 +6,14 @@ const Services = ({ services }) => {
   return (
     <section id="services" className="qizuna-section qizuna-section-alt">
       <div className="qizuna-section-content">
-        <div className="qizuna-section-header">
+        <div className="qizuna-section-header qizuna-animate">
           <h2 className="qizuna-section-title">Nos services</h2>
           <p className="qizuna-section-subtitle">
             Du développement web à l&apos;application mobile — des solutions pensées pour durer
           </p>
         </div>
 
-        <div className="qizuna-services-grid">
+        <div className="qizuna-services-grid qizuna-animate qizuna-animate-delay-2">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

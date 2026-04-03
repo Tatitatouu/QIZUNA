@@ -35,7 +35,7 @@ const Contact = ({ contactInfo = {} }) => {
   return (
     <section id="contact" className="qizuna-section qizuna-contact">
       <div className="qizuna-section-content">
-        <div className="qizuna-contact-content">
+        <div className="qizuna-contact-content qizuna-animate">
           <div className="qizuna-contact-info">
             <h2>Parlons de votre <span className="highlight">projet</span></h2>
             <p>Décrivez votre projet en quelques lignes. Nous revenons vers vous sous 24h — échange gratuit, sans engagement.</p>

@@ -5,7 +5,7 @@ const Philosophy = ({ data, pillars }) => {
   return (
     <section id="philosophie" className="qizuna-section qizuna-philosophy">
       <div className="qizuna-section-content">
-        <div className="qizuna-philosophy-header">
+        <div className="qizuna-philosophy-header qizuna-animate">
           <span className="qizuna-philosophy-badge">{data?.badge || 'Notre Approche'}</span>
           <h2>{data?.title || ''}</h2>
           <p className="qizuna-philosophy-intro">
@@ -15,7 +15,7 @@ const Philosophy = ({ data, pillars }) => {
 
         <div className="qizuna-philosophy-pillars">
           {pillars.map((pillar, index) => (
-            <div key={index} className="qizuna-pillar-card">
+            <div key={index} className={`qizuna-pillar-card qizuna-animate qizuna-animate-delay-${index + 1}`}>
               <div className="qizuna-pillar-icon">
                 {pillar.icon}
               </div>
@@ -25,7 +25,7 @@ const Philosophy = ({ data, pillars }) => {
           ))}
         </div>
 
-        <div className="qizuna-philosophy-promise">
+        <div className="qizuna-philosophy-promise qizuna-animate">
           <div className="qizuna-promise-content">
             <h3>{data?.promiseTitle || 'Notre promesse'}</h3>
             <p>

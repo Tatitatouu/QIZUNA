@@ -209,7 +209,7 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body>
         <div className={`${manrope.variable} ${manrope.className}`}>
-          <link rel="preconnect" href="https://stats.qizuna.net" />
+          <link rel="preconnect" href="https://stats.qizuna.net" crossOrigin="anonymous" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

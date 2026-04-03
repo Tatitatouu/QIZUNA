@@ -70,8 +70,8 @@ const References = ({ references = [] }) => {
   return (
     <section className="qizuna-references">
       <div className="qizuna-section-content">
-        <div className="qizuna-section-header qizuna-references-header">
-          <h2 className="qizuna-section-title qizuna-fade-in-up">
+        <div className="qizuna-section-header qizuna-references-header qizuna-animate">
+          <h2 className="qizuna-section-title">
             Nos réalisations
           </h2>
           <p className="qizuna-section-subtitle">Ils nous ont fait confiance pour leur transformation numérique</p>
@@ -116,7 +116,7 @@ const References = ({ references = [] }) => {
         </div>
 
         <div className="qizuna-case-studies">
-          <div className="qizuna-case-study">
+          <div className="qizuna-case-study qizuna-animate">
             <h3>InMemorium : une application métier pensée pour les professionnels du funéraire</h3>
             <p>
               Sonia et son équipe avaient besoin d&apos;un outil de gestion interne adapté à leur secteur.
@@ -124,7 +124,7 @@ const References = ({ references = [] }) => {
               intuitif, adopté immédiatement par les équipes, sans formation lourde.
             </p>
           </div>
-          <div className="qizuna-case-study">
+          <div className="qizuna-case-study qizuna-animate qizuna-animate-delay-2">
             <h3>Tech Eaux Énergies : un logiciel sur mesure pour un métier complexe</h3>
             <p>
               Cédric avait une demande technique pointue, avec des contraintes métier que les solutions
