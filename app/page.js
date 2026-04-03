@@ -22,6 +22,7 @@ import Values from '@/components/sections/Values'
 import Certification from '@/components/sections/Certification'
 import References from '@/components/sections/References'
 import Testimonials from '@/components/sections/Testimonials'
+import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
         <Certification data={certificationData} />
         <Testimonials testimonials={testimonials} />
         <References references={references} />
+        <FAQ />
         <Contact contactInfo={contactInfo} />
       </main>
       <Footer data={footerData} />

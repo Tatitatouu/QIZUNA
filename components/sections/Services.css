@@ -96,3 +96,18 @@
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 12px 40px rgba(37, 189, 173, 0.35);
 }
+
+.qizuna-service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #25bdad;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.qizuna-service-link:hover {
+  gap: 0.75rem;
+}

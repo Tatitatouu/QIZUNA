@@ -236,7 +236,8 @@
 @media (prefers-reduced-motion: reduce) {
   .qizuna-references-ticker-content.ticker-down,
   .qizuna-references-ticker-content.ticker-up {
-    animation: none;
+    animation-duration: 36s !important;
+    animation-iteration-count: infinite !important;
   }
   .qizuna-reference-logo img,
   .qizuna-reference-card,
@@ -286,6 +287,44 @@
   padding: 1rem;
 }
 
+
+/* Cas clients */
+.qizuna-case-studies {
+  display: grid;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 4rem auto;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .qizuna-case-studies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.qizuna-case-study {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+}
+
+.qizuna-case-study h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.qizuna-case-study p {
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
 
 /* Tablettes */
 @media (max-width: 968px) {

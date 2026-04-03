@@ -7,10 +7,7 @@ const Philosophy = ({ data, pillars }) => {
       <div className="qizuna-section-content">
         <div className="qizuna-philosophy-header">
           <span className="qizuna-philosophy-badge">{data?.badge || 'Notre Approche'}</span>
-          <h2>
-            {(data?.title || '').split('?')[0]}?<br />
-            <span className="highlight">{(data?.title || '').split('?')[1]?.trim() || ''}</span>
-          </h2>
+          <h2>{data?.title || ''}</h2>
           <p className="qizuna-philosophy-intro">
             {data?.intro || ''}
           </p>

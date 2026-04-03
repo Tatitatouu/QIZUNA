@@ -5,9 +5,10 @@ import { ArrowRight } from 'lucide-react'
 import './References.css'
 
 const References = ({ references = [] }) => {
-  const leftReferences = references.slice(0, 6)
-  const middleReferences = references.slice(6, 12)
-  const rightReferences = references.slice(12, 18)
+  const colSize = Math.ceil(references.length / 3)
+  const leftReferences = references.slice(0, colSize)
+  const middleReferences = references.slice(colSize, colSize * 2)
+  const rightReferences = references.slice(colSize * 2)
 
   const duplicatedLeftRefs = [...leftReferences, ...leftReferences, ...leftReferences]
   const duplicatedMiddleRefs = [...middleReferences, ...middleReferences, ...middleReferences]
@@ -16,8 +17,7 @@ const References = ({ references = [] }) => {
   const cardHeight = 100
   const gap = 20
   const totalHeightPerCard = cardHeight + gap
-  const groupLength = 6
-  const distance = totalHeightPerCard * groupLength
+  const distance = totalHeightPerCard * colSize
   const duration = 18
 
   const handleImageError = (e) => {
@@ -88,41 +88,57 @@ const References = ({ references = [] }) => {
         <div className="qizuna-references-ticker-container">
           {/* Premiere colonne - DESCEND */}
           <div className="qizuna-references-ticker">
-            <motion.div
+            <div
               className="qizuna-references-ticker-content ticker-down"
               style={{ '--ticker-distance': `${distance}px`, '--ticker-duration': `${duration}s` }}
-              initial={false}
             >
               {duplicatedLeftRefs.map((reference, index) =>
                 renderReferenceCard(reference, index, 'left')
               )}
-            </motion.div>
+            </div>
           </div>
 
           {/* Deuxieme colonne - MONTE */}
           <div className="qizuna-references-ticker">
-            <motion.div
+            <div
               className="qizuna-references-ticker-content ticker-up"
               style={{ '--ticker-distance': `${distance}px`, '--ticker-duration': `${duration}s` }}
-              initial={false}
             >
               {duplicatedMiddleRefs.map((reference, index) =>
                 renderReferenceCard(reference, index, 'middle')
               )}
-            </motion.div>
+            </div>
           </div>
 
           {/* Troisieme colonne - DESCEND */}
           <div className="qizuna-references-ticker">
-            <motion.div
+            <div
               className="qizuna-references-ticker-content ticker-down"
               style={{ '--ticker-distance': `${distance}px`, '--ticker-duration': `${duration}s` }}
-              initial={false}
             >
               {duplicatedRightRefs.map((reference, index) =>
                 renderReferenceCard(reference, index, 'right')
               )}
-            </motion.div>
+            </div>
+          </div>
+        </div>
+
+        <div className="qizuna-case-studies">
+          <div className="qizuna-case-study">
+            <h3>InMemorium : une application métier pensée pour les professionnels du funéraire</h3>
+            <p>
+              Sonia et son équipe avaient besoin d&apos;un outil de gestion interne adapté à leur secteur.
+              Nous avons conçu InMemorium de A à Z : UX, développement, déploiement. Résultat : un outil
+              intuitif, adopté immédiatement par les équipes, sans formation lourde.
+            </p>
+          </div>
+          <div className="qizuna-case-study">
+            <h3>Tech Eaux Énergies : un logiciel sur mesure pour un métier complexe</h3>
+            <p>
+              Cédric avait une demande technique pointue, avec des contraintes métier que les solutions
+              du marché ne couvraient pas. Nous avons développé un logiciel sur mesure qui s&apos;adapte
+              exactement à leurs processus. Livré dans les délais, maintenu et évolutif.
+            </p>
           </div>
         </div>
 

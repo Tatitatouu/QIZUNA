@@ -9,7 +9,7 @@ const Services = ({ services }) => {
         <div className="qizuna-section-header">
           <h2 className="qizuna-section-title">Nos services</h2>
           <p className="qizuna-section-subtitle">
-            Des outils numériques de qualité supérieure pour transformer vos idées en réalité
+            Du développement web à l&apos;application mobile — des solutions pensées pour durer
           </p>
         </div>
 
@@ -21,6 +21,8 @@ const Services = ({ services }) => {
               title={service.title}
               description={service.description}
               features={service.features}
+              linkText={service.linkText}
+              linkHref={service.linkHref}
             />
           ))}
         </div>

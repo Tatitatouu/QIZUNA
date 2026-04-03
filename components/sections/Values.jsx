@@ -14,11 +14,10 @@ const Values = ({ values }) => {
           </div>
           <h2 className="qizuna-values-mega-title">
             <span className="qizuna-word-1">Nos</span>
-            <span className="qizuna-word-2">Valeurs</span>
-            <span className="qizuna-word-3">Explosives</span>
+            <span className="qizuna-word-2">valeurs</span>
           </h2>
           <p className="qizuna-values-punch-line">
-            L&apos;ADN qui fait vibrer chaque projet Qizuna !
+            L&apos;ADN qui fait vibrer chaque projet Qizuna
           </p>
         </div>
 
