@@ -53,7 +53,7 @@ const Footer = ({ data = {} }) => {
       <footer className="qizuna-footer-simple">
         <div className="qizuna-footer-simple-content">
           <div className="qizuna-footer-simple-logo">
-            <img src="/logo.webp" alt="Qizuna" className="qizuna-logo-img" />
+            <img src="/logo.webp" alt="Qizuna" className="qizuna-logo-img" width={183} height={61} loading="lazy" />
           </div>
 
           <div className="qizuna-footer-simple-links">

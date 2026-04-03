@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import './References.css'
 
@@ -29,22 +28,21 @@ const References = ({ references = [] }) => {
 
   const renderReferenceCard = (reference, index, prefix) => {
     const card = (
-      <motion.div
-        className="qizuna-reference-card"
-        whileHover={{ scale: 1.08, zIndex: 10 }}
-        transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-      >
+      <div className="qizuna-reference-card">
         <div className="qizuna-reference-logo">
           <img
             src={reference.logo}
             alt={reference.alt}
+            width={200}
+            height={45}
+            loading="lazy"
             onError={handleImageError}
           />
           <div className="qizuna-logo-placeholder" style={{ display: 'none' }}>
             {reference.name}
           </div>
         </div>
-      </motion.div>
+      </div>
     )
 
     if (reference.link) {
@@ -73,15 +71,9 @@ const References = ({ references = [] }) => {
     <section className="qizuna-references">
       <div className="qizuna-section-content">
         <div className="qizuna-section-header qizuna-references-header">
-          <motion.h2
-            className="qizuna-section-title"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <h2 className="qizuna-section-title qizuna-fade-in-up">
             Nos réalisations
-          </motion.h2>
+          </h2>
           <p className="qizuna-section-subtitle">Ils nous ont fait confiance pour leur transformation numérique</p>
         </div>
 

@@ -36,7 +36,7 @@ const Navigation = ({ navLinks = [] }) => {
       <nav className={`qizuna-nav ${scrollY > 50 ? 'scrolled' : ''}`}>
         <div className="qizuna-nav-content">
           <div className="qizuna-logo">
-            <img src="/logo.webp" alt="Qizuna" className="qizuna-logo-img" />
+            <img src="/logo.webp" alt="Qizuna" className="qizuna-logo-img" width={183} height={61} fetchPriority="high" />
           </div>
           <div className="qizuna-nav-links">
             {navLinks.map((link) => (
@@ -69,7 +69,7 @@ const Navigation = ({ navLinks = [] }) => {
       <div className={`qizuna-mobile-nav ${isMenuOpen ? 'open' : ''}`}>
         <div className="qizuna-mobile-nav-header">
           <div className="qizuna-logo">
-            <img src="/logo.webp" alt="Qizuna" className="qizuna-logo-img" />
+            <img src="/logo.webp" alt="Qizuna" className="qizuna-logo-img" width={183} height={61} fetchPriority="high" />
           </div>
           <button
             className="qizuna-mobile-close"
