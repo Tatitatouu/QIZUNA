@@ -1,0 +1,61 @@
+---
+title: "React Native vs Flutter : quel framework choisir pour votre app mobile ?"
+description: "Comparatif React Native vs Flutter en 2024 : performances, écosystème, courbe d'apprentissage. Quel framework choisir pour votre projet mobile ?"
+date: "2024-03-15"
+slug: "react-native-vs-flutter"
+canonical: "https://qizuna.fr/blog/react-native-vs-flutter"
+---
+
+React Native (Meta) et Flutter (Google) sont les deux frameworks cross-platform dominants pour le développement d'applications mobiles. Les deux permettent de cibler iOS et Android avec une seule base de code — mais leurs approches sont très différentes.
+
+## React Native en bref
+
+React Native utilise JavaScript/TypeScript et le paradigme React. Il compile vers des composants natifs réels — ce qui signifie que l'UI utilise les vrais composants iOS et Android, pas des équivalents simulés.
+
+**Points forts :**
+- Écosystème JavaScript mature (npm, millions de packages)
+- Courbe d'apprentissage faible pour les équipes web React
+- Hot reload rapide en développement
+- Large communauté et support Meta + Microsoft
+
+**Points faibles :**
+- Performances légèrement inférieures à Flutter sur les animations complexes
+- Dépendance au bridge JS/natif (en cours de résolution avec la nouvelle architecture)
+- Fragmentation des packages tiers
+
+## Flutter en bref
+
+Flutter utilise le langage Dart et dessine lui-même chaque pixel de l'interface via son propre moteur de rendu (Skia/Impeller). L'UI est identique sur iOS et Android — ce qui est un avantage pour la cohérence visuelle, mais signifie que l'app ne ressemble pas aux apps natives.
+
+**Points forts :**
+- Performances excellentes, même sur les animations complexes
+- UI pixel-perfect identique sur toutes les plateformes
+- Compilation AOT (Ahead of Time) pour des démarrages rapides
+- Cible aussi le web et le desktop
+
+**Points faibles :**
+- Dart est un langage peu répandu (courbe d'apprentissage)
+- Taille des apps plus importante
+- L'UI ne ressemble pas aux composants natifs iOS/Android
+
+## Comparatif synthétique
+
+| Critère | React Native | Flutter |
+|---|---|---|
+| Langage | JavaScript / TypeScript | Dart |
+| Performances | Très bonnes | Excellentes |
+| UI native | Oui | Non (rendu custom) |
+| Courbe d'apprentissage | Faible (si React connu) | Moyenne |
+| Écosystème | Très large | En croissance |
+| Taille de l'app | Légère | Plus lourde |
+| Communauté | Très large | Large |
+
+## Notre recommandation
+
+**Choisissez React Native si** : votre équipe maîtrise déjà React/JavaScript, vous avez besoin d'intégrations natives complexes, ou vous développez en parallèle une application web.
+
+**Choisissez Flutter si** : les performances et la cohérence visuelle sont prioritaires, vous partez de zéro sans contrainte technologique, ou vous ciblez aussi le desktop.
+
+Chez Qizuna, nous travaillons principalement avec React Native — notre expertise web React nous permet de partager du code et des compétences entre les projets web et mobile, ce qui réduit les coûts et les délais.
+
+[Parlons de votre projet mobile](/developpement-application-mobile) — nous vous conseillons le meilleur choix selon votre contexte.

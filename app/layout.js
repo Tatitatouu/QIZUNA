@@ -11,9 +11,9 @@ const manrope = Manrope({
 
 export const metadata = {
   metadataBase: new URL('https://qizuna.fr'),
-  title: 'Agence développement web sur mesure | Qizuna',
-  description: 'Qizuna, agence développement web sur mesure basée en Alsace. Logiciels, applications mobiles et sites web — livrés sans dette technique, sans lock-in. Certifié France Num. Réponse sous 24h.',
-  keywords: 'agence développement web, développement web sur mesure, application mobile, logiciel sur mesure, agence digitale, Alsace, France',
+  title: 'Agence web & développement logiciel sur mesure à Mulhouse | Qizuna',
+  description: 'Agence web à Mulhouse en Alsace : développement logiciel sur mesure, applications mobiles iOS & Android et sites web. Certifié France Num. Devis gratuit en 24h.',
+  keywords: 'agence web Mulhouse, agence développement web, développement logiciel sur mesure, logiciel sur mesure Alsace, création site web Mulhouse, application mobile, agence digitale Alsace',
   authors: [{ name: 'Qizuna' }],
   creator: 'Qizuna',
   publisher: 'Qizuna',
@@ -23,8 +23,8 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Agence développement web sur mesure | Qizuna',
-    description: 'Qizuna, agence développement web sur mesure basée en Alsace. Logiciels, applications mobiles et sites web — livrés sans dette technique, sans lock-in. Certifié France Num. Réponse sous 24h.',
+    title: 'Agence web & développement logiciel sur mesure à Mulhouse | Qizuna',
+    description: 'Agence web à Mulhouse en Alsace : développement logiciel sur mesure, applications mobiles iOS & Android et sites web. Certifié France Num. Devis gratuit en 24h.',
     url: 'https://qizuna.fr',
     siteName: 'Qizuna',
     images: [
@@ -40,8 +40,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agence développement web sur mesure | Qizuna',
-    description: 'Qizuna, agence développement web sur mesure basée en Alsace. Logiciels, applications mobiles et sites web — livrés sans dette technique, sans lock-in. Certifié France Num. Réponse sous 24h.',
+    title: 'Agence web & développement logiciel sur mesure à Mulhouse | Qizuna',
+    description: 'Agence web à Mulhouse en Alsace : développement logiciel sur mesure, applications mobiles iOS & Android et sites web. Certifié France Num. Devis gratuit en 24h.',
     images: ['/logo.webp'],
   },
   alternates: {
@@ -59,7 +59,7 @@ const organizationSchema = {
   name: 'Qizuna',
   url: 'https://qizuna.fr',
   logo: 'https://qizuna.fr/logo.webp',
-  description: 'Agence développement web sur mesure basée en Alsace. Logiciels, applications mobiles et sites web.',
+  description: 'Agence web et développement logiciel sur mesure à Mulhouse, en Alsace. Sites web, applications mobiles et logiciels métier.',
   foundingDate: '2024',
   address: {
     '@type': 'PostalAddress',
@@ -86,7 +86,7 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'Qizuna',
   url: 'https://qizuna.fr',
-  description: 'Agence développement web sur mesure basée en Alsace. Logiciels, applications mobiles et sites web.',
+  description: 'Agence web et développement logiciel sur mesure à Mulhouse, en Alsace. Sites web, applications mobiles et logiciels métier.',
 }
 
 const serviceSchema = {
@@ -98,7 +98,7 @@ const serviceSchema = {
   },
   serviceType: 'Développement Web et Solutions Digitales',
   description: 'Services de développement web, applications mobiles, audit sécurité et hébergement cloud',
-  areaServed: 'France',
+  areaServed: ['Mulhouse', 'Alsace', 'France'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Services Qizuna',
@@ -145,15 +145,19 @@ const localBusinessSchema = {
   '@id': 'https://qizuna.fr/#localbusiness',
   name: 'Qizuna',
   image: 'https://qizuna.fr/logo.webp',
+  description: 'Agence web et développement logiciel sur mesure à Mulhouse',
   telephone: '+33367266916',
   email: 'hello@qizuna.fr',
+  url: 'https://qizuna.fr',
   address: {
     '@type': 'PostalAddress',
     streetAddress: "25 rue de l'écluse",
     addressLocality: 'Pfastatt',
+    addressRegion: 'Alsace',
     postalCode: '68120',
     addressCountry: 'FR',
   },
+  areaServed: ['Mulhouse', 'Alsace', 'Haut-Rhin'],
   priceRange: '$$',
 }
 

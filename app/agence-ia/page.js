@@ -10,11 +10,11 @@ import { navLinks, contactInfo, footerData } from '@/lib/data'
 import '../service-page.css'
 
 export const metadata = {
-  title: 'Agence intelligence artificielle et automatisation IA | Qizuna',
+  title: 'Agence automatisation IA | Intelligence artificielle sur mesure | Qizuna',
   description: 'Agence d\'automatisation IA en Alsace. Développement de solutions d\'intelligence artificielle sur mesure, agents IA et automatisation métier pour PME & ETI. Devis gratuit en 24h.',
   alternates: { canonical: 'https://qizuna.fr/agence-ia' },
   openGraph: {
-    title: 'Agence intelligence artificielle et automatisation IA | Qizuna',
+    title: 'Agence automatisation IA | Intelligence artificielle sur mesure | Qizuna',
     url: 'https://qizuna.fr/agence-ia',
   },
 }

@@ -46,10 +46,9 @@ const Hero = ({ data }) => {
         <h1
           className="qizuna-hero-title"
           dangerouslySetInnerHTML={{
-            __html: (data?.title || '').replace(
-              /<span>(.*?)<\/span>/,
-              '<span class="qizuna-gradient-text">$1</span>'
-            )
+            __html: (data?.title || '')
+              .replace(/<em>(.*?)<\/em>/, '<em class="qizuna-hero-eyebrow">$1</em>')
+              .replace(/<span>(.*?)<\/span>/, '<span class="qizuna-gradient-text">$1</span>')
           }}
         />
         <p className="qizuna-hero-subtitle">

@@ -82,6 +82,17 @@
   letter-spacing: -0.02em;
 }
 
+.qizuna-hero-eyebrow {
+  display: block;
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #25bdad;
+  margin-bottom: 0.75rem;
+}
+
 .qizuna-gradient-text {
   background: linear-gradient(135deg, #25bdad, #667eea);
   -webkit-background-clip: text;

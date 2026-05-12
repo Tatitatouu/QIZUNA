@@ -76,6 +76,68 @@
   color: var(--primary-color);
 }
 
+/* Desktop Dropdown */
+.qizuna-nav-dropdown {
+  position: relative;
+}
+
+.qizuna-nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+.qizuna-dropdown-chevron {
+  transition: transform 0.3s ease;
+}
+
+.qizuna-dropdown-chevron.open {
+  transform: rotate(180deg);
+}
+
+.qizuna-nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  min-width: 240px;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.qizuna-nav-dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.qizuna-nav-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-medium);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.qizuna-nav-dropdown-item:hover {
+  background: rgba(37, 189, 173, 0.08);
+  color: var(--primary-color);
+}
+
 .qizuna-mobile-menu {
   display: block;
   background: none;
@@ -242,6 +304,52 @@
 
 .qizuna-mobile-nav-link:hover {
   background: rgba(37, 189, 173, 0.1);
+  color: var(--primary-color);
+}
+
+/* Mobile Dropdown */
+.qizuna-mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.qizuna-mobile-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.qizuna-mobile-dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 1rem;
+}
+
+.qizuna-mobile-dropdown-menu.open {
+  max-height: 200px;
+}
+
+.qizuna-mobile-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.qizuna-mobile-dropdown-item:hover {
+  background: rgba(37, 189, 173, 0.08);
   color: var(--primary-color);
 }
 

@@ -9,7 +9,7 @@ const Services = ({ services }) => {
         <div className="qizuna-section-header qizuna-animate">
           <h2 className="qizuna-section-title">Nos services</h2>
           <p className="qizuna-section-subtitle">
-            Du développement web à l&apos;application mobile — des solutions pensées pour durer
+            Du développement web à l&apos;application mobile — des solutions sur mesure pour les entreprises de Mulhouse et d&apos;Alsace
           </p>
         </div>
 

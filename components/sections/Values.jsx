@@ -6,7 +6,7 @@ const Values = ({ values }) => {
   return (
     <section id="valeurs" className="qizuna-section qizuna-values-dynamic">
       <div className="qizuna-section-content">
-        <div className="qizuna-values-header-dynamic">
+        <div className="qizuna-values-header-dynamic qizuna-animate">
           <div className="qizuna-values-explosion">
             <Sparkles className="qizuna-spark qizuna-spark-1" />
             <Zap className="qizuna-spark qizuna-spark-2" />
@@ -21,7 +21,7 @@ const Values = ({ values }) => {
           </p>
         </div>
 
-        <div className="qizuna-values-grid-dynamic">
+        <div className="qizuna-values-grid-dynamic qizuna-animate qizuna-animate-delay-2">
           {values.map((value, index) => (
             <ValueCard
               key={index}

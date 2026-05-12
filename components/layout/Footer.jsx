@@ -50,28 +50,33 @@ const Footer = ({ data = {} }) => {
 
   return (
     <>
-      <footer className="qizuna-footer-simple">
-        <div className="qizuna-footer-simple-content">
-          <div className="qizuna-footer-simple-logo">
-            <img src="/logo.webp" alt="Qizuna" className="qizuna-logo-img" width={183} height={61} loading="lazy" />
+      <footer className="qizuna-footer">
+        <div className="qizuna-footer-top">
+          <div className="qizuna-footer-col">
+            <img src="/logo.webp" alt="Qizuna" className="qizuna-footer-logo" loading="lazy" />
+            <address className="qizuna-footer-address">
+              {hq.street || "15 rue de l'Oberfeld"}<br />
+              {hq.postalCode || '68760'} {hq.city || 'Willer-sur-Thur'}<br />
+              Tél : <a href={`tel:${(data.phone || '03 67 26 69 16').replace(/\s/g, '')}`}>{data.phone || '03 67 26 69 16'}</a>
+            </address>
           </div>
 
-          <div className="qizuna-footer-simple-links">
-            <button
-              ref={triggerRef}
-              onClick={() => setIsLegalModalOpen(true)}
-              className="qizuna-footer-link"
-            >
-              Mentions légales
-            </button>
-            <a href={`mailto:${data.email || 'hello@qizuna.fr'}`} className="qizuna-footer-link">
-              {data.email || 'hello@qizuna.fr'}
-            </a>
-            <span className="qizuna-footer-copyright">
-              &copy; {new Date().getFullYear()} {data.companyName || 'Qizuna SAS'}
-            </span>
+          <div className="qizuna-footer-col">
+            <h3 className="qizuna-footer-heading">Liens</h3>
+            <nav className="qizuna-footer-nav">
+              <a href={`mailto:${data.email || 'hello@qizuna.fr'}`}>{data.email || 'hello@qizuna.fr'}</a>
+              <button
+                ref={triggerRef}
+                onClick={() => setIsLegalModalOpen(true)}
+                className="qizuna-footer-nav-btn"
+              >
+                Mentions légales
+              </button>
+            </nav>
+          </div>
 
-            <div className="qizuna-linkedin-title">Suivez-nous</div>
+          <div className="qizuna-footer-col">
+            <h3 className="qizuna-footer-heading">Suivez-nous</h3>
             <div className="qizuna-linkedin-links">
               <a
                 href={data.linkedinPersonal || 'https://www.linkedin.com/in/mathieu-capon-56a5561a0/'}
@@ -97,6 +102,10 @@ const Footer = ({ data = {} }) => {
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="qizuna-footer-bottom">
+          <span>&copy; {new Date().getFullYear()} {data.companyName || 'Qizuna SAS'} — Tous droits réservés</span>
         </div>
       </footer>
 
